@@ -4,6 +4,7 @@ title: 지킬 설치 과정
 categories: [general, jekyll]
 tags: [dbyll, jekyll]
 description: 지킬 설치 과정.
+comments: true
 ---
 
 두 번째 과제로 jekyll을 이용해서 github블로그를 만드는 작업을 했다.
