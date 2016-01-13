@@ -1,0 +1,24 @@
+---
+layout: post
+title: JAVA기반의 웹 크롤러
+categories: [java, crawler, project]
+tags: [java, crawler]
+description: 프로젝트 조사 자료.
+comments: true
+---
+
+루키행복 TF의 뉴스 프로젝트를 위한 조사 중 뉴스 수집 방법에 대해 고민하였고, RSS 피드를 통한 방식과 크롤링을 통한 방식 두 가지 방법을 두고
+비교하게 되었다.
+많은 고민 끝에 크롤링을 하는 방법이 더 좋을것 같다는 판단을 하고 이에 대한 조사를 시작하였다.
+
+#JAVA 기반의 웹 크롤러
+JAVA를 기반으로 한 크롤러를 2가지 조사 하였는데, 정적 크롤러를 대표하여 crawler4j와 동적 크롤러를 대표하여 crawljax를 조사하였다.
+## crawler4j
+[crawler4j github](https://github.com/yasserg/crawler4j)의 튜토리얼을 따라하면 간단하게 기본적으로 httpClient를 이용하여 target site의 
+정보를 수집하는 예제를 만들어 볼 수 있다.
+테스트를 해보며 아쉬웠던 부분은 ajax를 통해서 데이터를 받아오도록 구성되어 있는 웹을 대상으로는 사용하기 적합해 보이지 않았다.
+## crawljax
+ajax를 대상으로 한 페이지를 크롤링 하는 방법에 대해 조사하다가 알게 된 것이 바로 이 *crawljax*.
+crawljax의 경우 이름에서도 느껴지는 것처럼 ajax를 기반으로 작동할 수 있도록 만들어진 크롤러이다. 그런데 이 또한 클릭으로 이루어진 이벤트는
+발생 시켜서 받아올 수 있지만, 마우스 휠을 통한 이벤트를 발생시키는건 별도로 만들어야 하는 듯 했다.
+crawljax는 webDriver를 이용하여 원격으로 브라우저를 통해 target site의 웹을 가져오도록 되어있는 듯 했다.
