@@ -33,4 +33,6 @@ tags_path: tags.html
 
 BASE_PATH:
 
-gems: ['jekyll-pagination', 'jekyll-plantuml']
+gems: 
+  - jekyll-pagination
+  - jekyll-plantuml
