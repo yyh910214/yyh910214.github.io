@@ -1,0 +1,23 @@
+---
+layout: post
+title: Tomcat에 배포하기
+categories: [rookie, tomcat, server]
+tags: [rookie, tomcat, server]
+description: OAuth정리
+comments: true
+---
+
+## Tomcat에 War파일 배포
+1. STS에서 export메뉴를 선택하고 WEB항복의 war파일로 배포한다.
+2. 해당 war파일을 서버의 tomcat/webapps디렉토리로 옮긴다.
+3. tomcat/bin 디렉토리의 ./startup.sh을 실행한다.
+4. 필요한 JAVA 옵션은 setenv.sh에 등록하고, server.xml web.xml등을 이용해서 다양한 설정을 할 수 있다.
+
+## Tomcat과 Apache연동
+1. 톰켓과 아파치를 연동하면서 80포트를 이용해서 접속할 수 있고, URI 패턴에 따른 처리를 나눌 수 있다.
+2. Tomcat-connectors를 설치한다.
+3. 설치가 완료되면 Apache의 경로 아래 modules에 mod_jk.so가 생성된다.
+4. LoadModule jk_module modules/mod_jk.so와 같이 모듈을 로드한다.
+5. `<IfModule mod_jk.c> </IfModule> 사이에 Module과 관련된 정보를 설정한다.
+6.  JkWorkersFile conf/workers_jk.properties로 설정 파일을 가져오도록 하거나 JkMount를 통하여 직접 매핑 정보를 읽어오도록 한다.
+7.  worker.properties파일에서 worker.list등 worker와 관련된 셋팅을 진행한다.
