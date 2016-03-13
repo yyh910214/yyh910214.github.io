@@ -1,9 +1,9 @@
 ---
 layout: post
-title: 프로젝트 관리 도구 MAVEN(1) - MAVEN의 구성
-categories: [maven, project, package]
-tags: [maven, project, package]
-description: introduction to maven
+title: APACHE의 MPM
+categories: [apache, basecamp, performance]
+tags: [apache, basecamp, performance]
+description: apache module mpm
 comments: true
 ---
 과제를 진행하던 중 조회수를 측정하기 위해 f5키를 연타하게 되었고, 2분정도 f5키를 연속해서 누르고 있자 테스트용 서버가 뻗어버리는 문제가
