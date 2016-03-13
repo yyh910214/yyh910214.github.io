@@ -38,6 +38,7 @@ MPM모듈은 요청을 받아들이고, 받아들인 요청을 어떤 방식으�
 - 멀티 쓰레드에서 발생할 수 있는 race condition 대한 주의가 필요함.
 
 ## 사용 가능한 옵션
+
 ### prefork 방식
 - **StartServer**
 	- 아파치가 Start시 생성되는 자식 프로세스의 갯수.
@@ -77,9 +78,9 @@ MPM모듈은 요청을 받아들이고, 받아들인 요청을 어떤 방식으�
 	-  prefork 방식과 같습니다.
 
 ## MaxClients 설정과 관련한 글
-http://d2.naver.com/helloworld/132178
+[D2블로그](http://d2.naver.com/helloworld/132178)
 
 
 ## 참고
-- http://httpd.apache.org/docs/2.0/ko/mod/mpm_common.html
-- http://mindpower.kr/62
+- [http://httpd.apache.org/docs/2.0/ko/mod/mpm_common.html](http://httpd.apache.org/docs/2.0/ko/mod/mpm_common.html)
+- [http://mindpower.kr/62](http://mindpower.kr/62)
