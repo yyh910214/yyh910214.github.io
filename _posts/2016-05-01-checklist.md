@@ -19,3 +19,5 @@ comments: true
 - [ ] 대규모 서비스를 지탱하는 기술
 - [ ] 클린코드
 - [ ] java performance fundamental
+
+http://novathin.kr/75
