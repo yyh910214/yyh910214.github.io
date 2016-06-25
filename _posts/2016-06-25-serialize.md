@@ -11,7 +11,7 @@ comments: true
 
 얼마전 serialVersionUID에 대한 간단한 설명을 듣고, 그 동안 보면서도 아무 생각없이 지나갔던 자바의 직렬화와 serialVersionUID에 대해 알아봐야 겠다는 생각을 했다.  
 
-## serialize란?
+## Serialize란?
 
 우선, serialize가 무엇인지에 대한 개념부터 간단하게 집고 넘어가자.  
 내가 처음으로 직렬화를 접한 것은 학교 수업도중 자바를 이용해서 그림판을 만들었을때였다. 내가 작업중인 화면을 파일로 저장하는 기능을 만들어야 했는데, 그림판의 요소인 도형이나 라인들을 저장하려면 객체자체를 파일로 저장하고 불러올 수 있어야 했다.  
@@ -118,7 +118,7 @@ public class App {
 위 코드를 실행했을 경우의 결과는 아래 그림과 같이 나온다.  
 **transient**의 경우 직렬화 대상에서 제외되기 때문에 readObject로 읽어온 객체에서는 null로 나타다는 것을 볼 수 있다.  
 
-![Image alt]({{ site.baseurl }}/assets/img/serialize2.png "실행결과1")  
+![Image alt]({{ site.baseurl }}/assets/img/serialize2.PNG "실행결과1")  
 
 위 메서드들 중 writeObject를 클래스에 작성하게 되면 어떤 결과가 나오는지 확인해보자. SSerializableObject만 아래와 같이 변경하였다.
 
@@ -143,7 +143,7 @@ public class SerializableObject extends SerializableParentObject {
 
 결과는 다음과 같이 제대로 직렬화가 이뤄지지 않아서 읽어오는 부분에서 에러가 발생하는 것을 확인할 수 있다.  
 
-![Image alt]({{ site.baseurl }}/assets/img/serialize3.png "실행결과2")  
+![Image alt]({{ site.baseurl }}/assets/img/serialize3.PNG "실행결과2")  
 
 정리하자면  
 1. 객체를 직렬화 하고 싶으면 Serializable인터페이스를 implements하라.
